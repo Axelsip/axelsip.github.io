@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Review Hub</title>
+  <link rel="stylesheet" href="website.css">
+</head>
+<body>
+
+<header>
+  <h1 class="title">🎬 Movie Review Hub</h1>
+  <div id="auth">
+    <input type="text" id="username" placeholder="Enter username">
+    <button onclick="login()">Login</button>
+    <span id="currentUser"></span>
+    <button onclick="toggleTheme()" id="themeToggle">🌞 Light Mode</button>
+  </div>
+</header>
+
+<section class="controls">
+  <button onclick="sortMovies('high')">Highest Rated</button>
+  <button onclick="sortMovies('low')">Lowest Rated</button>
+  <button onclick="sortMovies('recent')">Recently Added</button>
+  <input type="text" id="genreFilter" placeholder="Filter by genre">
+  <button onclick="filterByGenre()">Filter</button>
+</section>
+
+<section class="add-movie">
+  <h2>Add Movie</h2>
+  <input type="text" id="movieTitle" placeholder="Title">
+  <input type="text" id="movieGenre" placeholder="Genre">
+  <button onclick="addMovie()">Add Movie</button>
+</section>
+
+<section id="movieList"></section>
+
+<script src="website.js"></script>
+</body>
+</html>
